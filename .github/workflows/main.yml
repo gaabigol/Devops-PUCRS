@@ -37,6 +37,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            gbeenard96/dietai-api:v1
+            gbeenard96/dietai-api:${{github.run_number}}
      
         
