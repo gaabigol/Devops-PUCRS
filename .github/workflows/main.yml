@@ -25,8 +25,8 @@ jobs:
       - name: Construção de Imagem docker
         uses: docker/build-push-action@v6.7.0
         with:
-          context: src
-          file: Dockerfile
+          context: ./src
+          file: ./src/Dockerfile
           push: true
           tags: |
             gbeenard96/dietai-api:v1
