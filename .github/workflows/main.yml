@@ -22,6 +22,12 @@ jobs:
       - name: Execução do teste
         run: mocha src/test/convert.js
 
+      - name: Autenticação no Docker Hub
+        uses: docker/login-action@v3.3.0
+        with:
+          username: ${{secrets.DOCKERHUB_USERNAME}}
+          password: ${{secrets.DOCKERHUB_PASSWORD}}
+        
       - name: Construção de Imagem docker
         uses: docker/build-push-action@v6.7.0
         with:
@@ -30,4 +36,5 @@ jobs:
           push: true
           tags: |
             gbeenard96/dietai-api:v1
+     
         
