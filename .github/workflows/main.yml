@@ -13,7 +13,7 @@ jobs:
       - name: Setup do Node JS
         uses: actions/setup-node@v4.0.3
         with: 
-          node-version: 18
+          node-version: 20.11.1
       - name: Instalação do Mocha e dos pacotes  para teste
         run: |
           cd src;
